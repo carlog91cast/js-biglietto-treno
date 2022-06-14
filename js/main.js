@@ -25,7 +25,8 @@ document.getElementById('prezzo-senza-sconto').innerHTML = ticketPrice;
 
 // console.log(`La percentuale ${percentage} di ${userNumber} è: ${result}`);
 
-// definisco in base all'età dell'utente se esso sia maggiorenne o minorenne
+// definisco in base all'età dell'utente se esso sia maggiorenne o over 65
+// va applicato poi uno sconto del 20% per i minorenni e del 40% per gli over 65.
 
 if ( userAge < 18) {
     console.log('è minorenne');
@@ -35,6 +36,8 @@ if ( userAge < 18) {
     ticketPrice = ticketPrice * 60 / 100;
 }
     console.log(ticketPrice);
-// va applicato ora uno sconto del 20% per i minorenni e del 40% per gli over 65.
+    document.getElementById('prezzo-scontato').innerHTML = ticketPrice;
+
+
 
 // toFixed
