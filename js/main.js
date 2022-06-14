@@ -35,8 +35,11 @@ if ( userAge < 18) {
     console.log('over 65');
     ticketPrice = ticketPrice * 60 / 100;
 }
+    let num = ticketPrice;
+    let n = num.toFixed(10);
     console.log(ticketPrice);
     document.getElementById('prezzo-scontato').innerHTML = ticketPrice;
+
 
 
 
