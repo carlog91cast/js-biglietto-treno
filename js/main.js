@@ -12,7 +12,7 @@ document.getElementById('age').innerHTML = userAge;
 
 // calcolo il prezzo del biglietto in base ai km (0.21€ al km)
 
-let costoAlKm = 0.21
+let costoAlKm = 0.21;
 let ticketPrice = userDistance * costoAlKm;
 console.log(ticketPrice);
 document.getElementById('prezzo-senza-sconto').innerHTML = ticketPrice;
@@ -27,22 +27,14 @@ document.getElementById('prezzo-senza-sconto').innerHTML = ticketPrice;
 
 // definisco in base all'età dell'utente se esso sia maggiorenne o minorenne
 
-if ( userAge > 18) {
-    console.log('è maggiorenne');
-
-} else if ( userAge > 18) {
-    console.log('è minorenne')
+if ( userAge < 18) {
+    console.log('è minorenne');
+    ticketPrice = ticketPrice * 80 / 100;
+} else if ( userAge > 65) {
+    console.log('over 65');
+    ticketPrice = ticketPrice * 60 / 100;
 }
-
+    console.log(ticketPrice);
 // va applicato ora uno sconto del 20% per i minorenni e del 40% per gli over 65.
 
-
-// if (eta == "minorenne") {
-//     ((ticketPrice / 100) * 80);
-//     offerta = "Sconto Minorenne";
-//    } else if (eta == "over65") {
-//     ((ticketPrice / 100) * 60);
-//     offerta = "Sconto Maggiorenne";
-//    } else {
-//     (ticketPrice);
-//    }
+// toFixed
